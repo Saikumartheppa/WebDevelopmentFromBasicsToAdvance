@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms In HTML</title>
+  </head>
+  <body>
+    <h1>Log - In Form</h1>
+    <form action="post"></form>
+    <!-- Input type using Text -->
+    <div>
+      <label for="username">Enter your user name</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+      />
+    </div>
+    <!-- Input type using radio -->
+    <div>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label>
+    </div>
+    <!-- Input Type Using CheckBox -->
+    <div>
+        <input type="checkbox" id = "terms" name="terms" value="yes">
+        <label for="terms">I Agree Terms & Conditions</label>
+    </div>
+    <!-- Text Area -->
+    <div>
+        <label for="bio">Enter about Yourself</label>
+        <br>
+        <textarea name="bio" id="bio" cols="50" rows="3"></textarea>
+    </div>
+    <!-- Select Tag -->
+    <div>
+        <select name="Qualification" >
+            <option value="MTech">M-Tech</option>
+            <option value="Btech">B-Tech</option>
+            <option value="Degree">Degree</option>
+        </select>
+    </div>
+  </body>
+</html>
