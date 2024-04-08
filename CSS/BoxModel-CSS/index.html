@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxModel-CSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            background-color: aquamarine;
+        }
+        /* content -> padding -> border -> margin */
+        .box1{
+            padding: 10px;
+            margin: 45px;
+            height: 200px;
+            border: 5px solid black;
+            background-color: blueviolet;
+            box-sizing: border-box;
+            /* If we declare any element property box-sizing as border-box then the height and width are includes content, padding & border*/
+        }
+        /*Margin Collapse - If the margin of any 2 elements over laps each other then the maximum margin of 2 elements will apply*/
+        .box2{
+            padding: 10px;
+            margin: 25px;
+            height: 200px;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">This is BOX 1</div>
+    <div class="box box2">This is BOX 2</div>
+</body>
+</html>
