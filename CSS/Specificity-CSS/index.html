@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity-CSS</title>
+    <style>
+       h1{
+        color: blue;
+       }
+       .cred{
+        color: red;
+       }
+       .cyellow{
+        color: yellow !important;
+       }
+       .cgreen{
+        color: green;
+       }
+       /* attribute Selector */
+       [data-y=a]{
+        color: brown;
+       }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="cred cyellow cgreen" data-y="a">Specificity-CSS</h1>
+        <ol type="1">
+            <li>Postion & Order of Appearance</li>
+            <li>Specificity</li>
+            <li>Origin</li>
+            <li>Importance</li>
+        </ol>
+        <dl >
+            <dt>Postion & Order of Appearance</dt>
+            <dd>The order in which CSS rule appear</dd>
+            <dd>The Last one wins if we are using same type selectors</dd>
+        </dl>
+        <dl>
+            <dt>Specificity</dt>
+            <dd>An Algorithm determines which CSS selector have Stronger match</dd>
+            <dd>The Selector which is more Specific</dd>
+            <dd>InLine-CSS -> ID Selector -> Class or attribute selector -> Element selector -> Universal Selector </dd>
+        </dl>
+        <dl>
+            <dt>Origin</dt>
+            <dd>Browser style or Browser extension </dd>
+            <dd>Which is also called User-agent-stylesheet</dd>
+        </dl>
+        <dl>
+            <dt>Importance</dt>
+            <dd>!important flag is used to a particular style rule the highest level importance</dd>
+            <dd>It can over ride InLine-CSS also</dd>
+        </dl>
+    </div>
+</body>
+</html>
