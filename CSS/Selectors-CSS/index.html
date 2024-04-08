@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors-CSS</title>
+    <style>
+        /* Element Selector -> The mentioned properties apply to all the div's in our HTML file */ 
+        div{
+            background-color: brown;
+        }
+       /* Class Selector -> The mentioned properties apply to the class which is named as mentioned below in our HTML file */
+       .classSelector{
+        background-color: green;
+       }
+       /* Id Selector -> Id acts as a Unique key in our HTML file & applies to the provided properties to mentioned Id*/
+       #IdSelector{
+        background-color: red;
+       }
+       /* Universal Selector -> Provided properties apply to all elements in our HTML file*/
+       *{
+         margin: 0;
+         padding: 0;
+         color: white;
+       }
+       /* Child Selector -> The properties apply to the caption which is direct child of div*/
+       div > caption{
+         background-color: blue;
+       }
+       /* Descendent Selector -> The properties apply to the paragraph which is child of div*/
+       div p{
+        background-color: blueviolet;
+       }
+       /* Pseudo Selector ->  used for anchor tags*/
+       
+       /* After Visting the Link, The color of the link changes */
+       a:visited{  
+        color: chartreuse;
+       }
+       /* Before visiting the link,The properties will apply */
+       a:link{
+        color: black;
+       }
+       /* When we hover on the link, The properties will apply */
+       a:hover{
+        background-color: darkcyan;
+       }
+       /* when we click on the link, The properties will apply  */
+       a:active{
+        background-color: darkorange;
+       }
+       
+    </style>
+</head>
+<body>
+    <div>
+        Element Selector
+    </div>
+    <div class="classSelector">
+        Class Selector
+    </div>
+    <p class="classSelector"> Class Selector</p>
+    <div id="IdSelector">Id Selector</div>
+    <div>
+        <caption>Child Selector</caption>
+    </div>
+    <div>
+        <article>
+            <p> Descendent Selector</p>
+        </article>
+    </div>
+    <div>
+        <a target="_blank" href="https://www.google.com">Open Google</a>
+        <a target="_blank" href="https://www.facebook1.com">Open Facebook1</a>
+    </div>
+</body> 
+</html>
