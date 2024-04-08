@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fonts - CSS</title>
+    <style>
+      /* Adding External fonts in our HTML file */
+      @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      h1 {
+        font-family: "Baloo 2", sans-serif;;
+        font-size: 50px;
+        font-weight: 100px;
+        font-style:normal;
+        /* text-decoration: underline; */
+        letter-spacing: 22px;
+      }
+      p {
+        line-height: 2;
+      }
+      h2{
+        text-transform: capitalize;
+        text-decoration: underline;
+        text-decoration-color: blue;
+        text-decoration-style:solid;
+        text-decoration-thickness: 7px;
+        text-indent: 45px;
+        text-align: center;
+      }
+      .para{
+        border: 2px solid red;
+        width: 140px;
+        /* text-overflow: ellipsis;
+        overflow: hidden; */
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>This a practice file on fonts</h1>
+      <h2>lorem issum dolor sit</h2>
+      <p class="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti omnis
+        voluptatem consequuntur quod? Recusandae dolore qui a consequatur autem
+        quasi reiciendis, cum laudantium.
+      </p>
+    </div>
+  </body>
+</html>
