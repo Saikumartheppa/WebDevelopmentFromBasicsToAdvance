@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow-CSS</title>
+    <style>
+        .box{
+           width: 30vw;
+           height: 10vh;
+           border: 2px solid black;
+           /* overflow: scroll; -> It will help in preventing the overflow by providing scroll bar */
+           /* overflow: scroll; */
+
+           /*  overflow: auto; -> It will help in preventing the overflow by providing scroll bar when the content exceeds our dimensions or else it will acts normal */
+           /* overflow: auto; */
+
+           /* white-space: nowrap; -> it does not allows the content in vertical lines. it will only shows in a single horizontal line */
+           /* white-space: nowrap;
+           text-overflow: ellipsis; */
+
+           /* overflow can be also prevented by individually */
+           overflow-x: hidden;
+           overflow-y: scroll;
+           /* shorthand */
+           overflow: hidden auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum molestias officia quo aspernatur optio laudantium? Quas obcaecati nemo deserunt distinctio maiores tenetur praesentium veritatis dicta minima doloribus nulla, molestiae, unde laborum alias. Numquam ipsum alias, quidem, possimus ut ad, error quia est quae sunt nam.
+    </div>
+</body>
+</html>

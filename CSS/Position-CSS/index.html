@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position-CSS</title>
+    <style>
+        /* If we want to z-Index or top,left,right,bottom then the position should not be static */
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            height: 330px;
+            width: 80vw;
+            padding: 3px;
+            margin: 3px;
+            border: 2px solid black;
+        }
+        .parent{
+            border: 3px solid orange;
+            padding: 43px;
+            margin: 34px;
+            position: absolute;
+        }
+        .box1{
+            background-color: yellowgreen;
+            /* position: relative;
+            /* z-index should be more than 0, so that the 1st element should appear over second one */
+            /* z-index: 1; */
+            
+            /*  position: absolute; -> It will set element  position fixed to nearest positioned ancestor*/
+            /* position: absolute; */
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            height: 50px;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        .box2{
+            background-color: paleturquoise;
+            /* top: -50px;
+            left: 50px;
+            position: relative; */
+        }
+        .box3{
+            /* position-fixed -> it will set element position at fixed point even we scroll the page */
+            background-color: peru;
+            position: fixed;
+            bottom: 0px;
+            left: 5vw;
+            height:50px
+        }
+        .box4{
+            background-color: purple;
+        }
+        .box5{
+            background-color: burlywood;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box box1">I am a box1 my position is sticky </div>
+        <div class="box box2">I am a box2 </div>
+        <div class="box box3">I am a box3 my position is fixed</div>
+        <div class="box box4">I am a box4 </div>
+        <div class="box box5">I am a box5 </div>
+    </div>
+</body>
+</html>

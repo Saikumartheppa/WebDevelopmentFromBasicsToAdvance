@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Property-CSS</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .box {
+        border: 2px solid green;
+        /* Display-Inline ->  is used to convert the block element to inline elements */
+        /* display: inline; */
+        /* The padding & margin is not applicable to top of the Inline-elements. So in that case we can use Inline-block */
+        display: inline-block;
+        width: 350px;
+        padding: 30px;
+        margin: 25px;
+      }
+      .box1{
+        /* display - none -> It will not display's the element and the space of element is occupying */
+        display: none;
+        /* visibility - hidden -> It will only hides the element & remains the space as empty element is occupying */
+        visibility:hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1">I am a box</div>
+    <div class="box">I am also a box</div>
+    <span>I am </span>
+    <span> good boy </span>
+  </body>
+</html>
