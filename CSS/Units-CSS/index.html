@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizes-CSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 16px;
+        }
+        .box{
+            background-color: aquamarine;
+            color: blue;
+            /* width: 1335px; */
+            /* vw -> View Port Width. By using VW the elements only takes maximum width of your device you are using, it Does not exceeds it.*/
+            width: 80vw;
+            /* vh -> view height it will assign the given percent height of VW */
+            height: 10vh;
+            /* margin - auto -> Assgins the left and right automitically, so that blocks elements should appear in center & only applicable for block elements */
+            margin: auto;
+            /* rem -> It will assign the value of root * value given .By the way HTML is the root element. all elements inherits the properties of root element*/
+            font-size: 2rem;
+            border: 2px solid brown;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: aquamarine;
+            color: blue;
+            /* width: 1335px; */
+            /* vw -> View Port Width. By using VW the elements only takes maximum width of your device you are using, it Does not exceeds it.*/
+            width: 80vw;
+            /* min-Height -> It will assign minimum height & max-height -> it will assigns the maximum height */
+            min-height: 80vh;
+            font-size: 15px;
+            /* margin - auto -> Assgins the left and right automitically, so that blocks elements should appear in center & only applicable for block elements */
+            /* margin short -> 1st unit will assign top & bottom margin & auto will assign left & right margin */
+            margin: 25px auto;
+            border: 2px solid brown;
+            box-sizing: border-box;
+        }
+        .container p{
+            /* em -> It will assign the element property to given value * parent property.If parent does not have any value then it computes with default value with given value */
+            font-size: 2em;
+        }
+        .another{
+            background-color: blueviolet;
+            font-size: 35px;
+            margin: 25px auto;
+            /* vmin -> for laps,desktops vmin is the height & for mobiles vmin is the width of mobile.Basically it will allocate the minimum of width and height of device you are using */
+            /* vmax ->  for laps,desktops vmax is the width & for mobiles vmax is the Width of mobile.Basically it will allocate the maximum of width and height of device you are using*/
+            /* width: 100vmin; */
+            width: 80vw;
+        }
+        p{
+            /* % -> It will assign the parent property to given percent */
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am a Box
+    </div>
+    <div class="container">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit accusantium veritatis incidunt illum in possimus provident beatae omnis quos fugit velit id fugiat eligendi repellendus, dolorum quibusdam voluptatem eum quo alias? Nulla, voluptate sapiente.
+        </p>
+    </div>
+    <div class="another">
+        I am a Another container
+    </div>
+</body>
+</html>
