@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query - CSS</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        /* @media not | only mediatype and (expressions){
+            css-code:
+        } */
+        /* portrait -> When the width is less than height
+           landscape -> when the width is greater than height  */
+
+        @media screen and (orientation : landscape){
+            body{
+                border: 5px solid red;
+            }
+        }
+        @media only screen and (max-width:455px){
+         body{
+             background-color: orange; 
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+        .boxes{
+            display: flex;
+        }
+        .box{
+            height: 344px;
+            width: 344px;
+            background-color: rebeccapurple;
+            border: 2px solid blanchedalmond;
+            padding: 3px;
+            margin: 3px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        I am a good box
+    </div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

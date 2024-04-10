@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables-CSS</title>
+    <style>
+        /* Declaring variables globally, so that we can use in our styling sheets */
+        /* Css-Variables is not only for holding the colors but it can also some other properties as well */
+        :root{
+            --color:brown;
+            --seccolor:rgb(188, 115, 115);
+            /* --defpad variable holding the padding  */
+            --defpad:15px;
+            /* --defpad variable holding the opacity */
+            --defop:0.1;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .navbar{
+            /* background-color: green; */
+            /* Declaring a local variable, it can override the root properties */
+            /* --color:orange; */
+            background-color: var(--color);
+        }
+        .container{
+            /* background-color: aquamarine; */
+            /* If the global or local variable is not present, then it will assign the mentioned color(in our case purple)  */
+            background-color: var(--seccolor,purple);
+        }
+        ul{
+            display: flex;
+        }
+        ul li:first-child{
+            background-color: var(--color);
+            border: 3px solid var(--seccolor);
+            padding: 30px;
+            margin: 10px;
+        }
+        ul li{
+            opacity: var(--defop);
+            list-style: none;
+            padding: var(--defpad);
+            margin: 5px;
+            border: 5px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quidem fuga explicabo magni voluptates eius suscipit exercitationem rerum praesentium dolores possimus accusamus cum modi cupiditate dicta dignissimos accusantium totam sit facilis iure, doloribus fugiat?
+    </div>
+</body>
+</html>
