@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: grey;
+}
+ .card{
+    height:420px;
+    width: 260px;
+    background-color:white; 
+    border: 2px solid snow;
+    margin:50px;
+    padding : 10px 25px 
+} 
+.box{
+    height:380px;
+    width: 250px;
+    background-color: white;
+    border: 2px solid gainsboro;
+    border-radius: 15px;
+    padding-bottom: 20px;
+}
+.image img{
+  padding: 5px;
+  border-radius: 15px;
+}
+.capsules{
+    padding: 2px 25px;
+}
+.capsules span{
+    border: 1px solid black;
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-size: 10px;
+    opacity: 40%;
+}
+.content{
+    padding: 10px 15px;
+    font-size: 20px;
+}
+.content p{
+    padding: 12px 0;
+    font-size: 15px;
+}
+.button{
+    padding: 0 80px;
+}
+.button button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 8px;
+    color: rgb(13, 19, 187);
+    background-color: rgba(202, 222, 249, 0.6);
+}
+.button button:hover{
+    background-color: rgba(125, 160, 234, 0.688);
+}

@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --color:rgb(20, 23, 40);
+    --seccolor:white;
+    --hovcolor:rgb(220, 114, 114);
+}
+.navbar{
+    height:40px;
+    width:500px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: var(--color);
+}
+.navbar ul li{
+    padding: 10px 15px;
+    display: inline-block;
+    color: var(--seccolor);
+}
+.navbar ul li:hover{
+    padding: 10px 15px;
+    background-color:var(--hovcolor);
+    border: 2px solid whitesmoke;
+    border-radius: 15px;
+}
