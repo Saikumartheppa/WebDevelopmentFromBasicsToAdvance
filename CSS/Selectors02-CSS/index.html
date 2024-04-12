@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors - CSS</title>
+    <style>
+      .boxes * {
+        background-color: bisque;
+      }
+      .boxes::before {
+        content: "Web-Development with help of Harry Bhai";
+        background-color: aqua;
+      }
+      .boxes::after {
+        content: "Harry bhai made by learning journey quite easy";
+        background-color: brown;
+        color: azure;
+      }
+      /* .box, [data-color = "primary"]{
+            background-color: blue;
+        } */
+      .box:last-child {
+        color: blueviolet;
+      }
+      .box:nth-last-child(2) {
+        color: green;
+      }
+      ::selection {
+        color: white;
+        background-color: black;
+      }
+      .box:nth-last-child(2)::selection {
+        background-color: yellow;
+        color: red;
+      }
+      .box::first-letter{
+        font-size: 45px;
+      }
+      .box:first-child{
+        background-color: cadetblue;
+        color: snow;
+      }
+      input::placeholder{
+        background-color:rgb(85, 16, 86);
+        color: rgb(240, 234, 234);
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxes">
+      <div data-color="primary" class="box">
+        I am a good div You know Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Rerum magni animi nulla commodi, quaerat cumque, dolor
+        vel perspiciatis beatae, exercitationem iusto accusamus placeat
+        consequatur pariatur distinctio natus dolores nemo similique ex ea modi
+        neque. Numquam quia non possimus necessitatibus ut magni laborum in.
+      </div>
+      <div class="box">
+        You know Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Illo, dolorum atque alias ipsam consequuntur soluta
+        voluptas exercitationem eius, perferendis nemo laborum, reprehenderit
+        vel?
+      </div>
+      <div class="box">
+        Good div You know Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Assumenda praesentium reiciendis minus sed saepe
+        recusandae, corporis, culpa officia ea consequuntur vitae blanditiis
+        nulla?
+      </div>
+      <div class="box">
+        <input type="text" placeholder="Enter your name here">
+      </div>
+    </div>
+  </body>
+</html>
