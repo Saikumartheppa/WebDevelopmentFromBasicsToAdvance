@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox-CSS</title>
+    <style>
+        .container{
+            border: 2px solid seagreen;
+            display: flex;
+            height: 80vh;
+            /* justify-content: center; Helps in aligning the content of main axis */
+            /* justify-content: center; */
+            /* align-items Helps in aligning the content of cross axis */
+            /* align-items: center; */
+            /* flex-direction: column; */
+            /* main axis is the direction of flex, by default it is left - right */
+            /* flex-direction: row; */
+            /*  flex-wrap: wrap -> Helps preventing the over flow of content, it lets the content to align in next line*/
+            /* flex-wrap: wrap; */
+            /* align-content: center -> when there are multiple lines  of content, to specify the position we use align-content instead of align items*/
+            align-content: flex-start;
+            /* There is no justify-items in flex box */
+            /* flex-flow: row wrap; */
+            /* gap: 10px; */
+            row-gap: 10px;
+            column-gap: 15px;
+            /* shorthand -> gap : 10px 15px */
+        }
+        .item{
+            height: 50px;
+            width: 50px;
+            border: 2px solid rgb(150, 46, 46);
+            /* margin: 5px; */
+            /* flex-grow: 1; */
+        }
+        .order-1{
+            order: 1;
+        }
+        .item1{
+            /* flex-grow: 2; */
+            flex-shrink: 2;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item order-1">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <!-- <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div> -->
+        <div class="item order-1">66</div>
+        <!-- <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div> -->
+        <!-- <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div> -->
+
+    </div>
+</body>
+</html>
