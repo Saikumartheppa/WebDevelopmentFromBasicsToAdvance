@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform - CSS</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid blue;
+            margin: 40px;
+        }
+        .box{
+            border: 2px solid blueviolet;
+            height: 70px;
+            width: 70px;
+            background-color: blanchedalmond;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(45deg);
+            /* transform: rotate(0.125turn); */
+            /* transform: rotateX(95deg); */
+            /* transform: rotateY(125deg); */
+            /* transform: rotateZ(45deg); */
+            /* transform: translateY(100%); */
+            /* to Use multple properties for a single element */
+            /* transform: translateX(100%) skewX(15deg) translateY(100%); */
+            transform-origin: 0%;
+
+        }
+        .box:hover{
+            /* transform: scale(2); */
+            /* transform: scaleX(2); */
+            /* transform: scaleZ(50); */
+            /* transform: scaleY(2);  */
+            /* transform: scale3d(25deg); */
+            /* transform: skew(15deg); */
+            /* transform: skewX(15deg);
+            transform: skewY(15deg); */
+            /* Skew dont have for z-Axis */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box xoB</div>
+    </div>
+</body>
+</html>
