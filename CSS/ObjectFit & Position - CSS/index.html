@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Fit & Position - CSS</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            height: 550px;
+            width: 450px;
+            background-image: url("JwtAuthentication.png");
+            /* background-position: top left; */
+            /* background-position: center center; */
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            background-clip: border-box;
+        }
+        img{
+            height: 550px;
+            width: 450px;
+            /* object-fit: fill -> Default value of objectfit is fill & image looks like distorted */
+            /* object-fit: fill; */
+            /* object-fit: scale-down; */
+            /* object-fit: contain; */
+            /* object-fit: cover; */
+            /* object-position: top right; */
+            /* object-position: top left; */
+            /* object-position: bottom right; */
+            /* object-position: 20px 40px; */
+            object-position: 50% 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="JwtAuthentication.png" alt="JwtAuthenticationPic"> -->
+    </div>
+</body>
+</html>

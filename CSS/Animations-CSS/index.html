@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations - CSS</title>
+    <style>
+        .container{
+            background-color: rgb(124, 201, 201);
+            width: 40vw;
+            height: 80vh;
+        }
+        .box{
+            width: 70px;
+            height: 70px;
+            /* animation-name: myAnimations;
+            animation-duration: 1s;
+            animation-timing-function: cubic-bezier(0.04, 0.1, 0, 0.93);;
+            animation-iteration-count: infinite;
+            animation-direction:alternate-reverse;
+            animation-delay: 2s;
+            animation-play-state: paused; */
+            
+            /* shorthand */
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+           /* animation: myAnimations 1s ease-in-out 3s 2 backwards; */
+           animation: myAnimations 1s ease-in-out 3s infinite,
+                      myAnimations2 2s ease 1s infinite;
+        }
+        @keyframes myAnimations {
+            from{
+                background-color:aqua;
+
+            }
+            to{
+                background-color: rgb(69, 239, 183);
+                transform: translateX(60vw);
+            }
+        }
+        @keyframes myAnimations2 {
+          0%{
+            transform:rotate(100deg);
+            background-color: blanchedalmond;
+        }
+        20%{
+            transform:rotate(150deg);
+            background-color: rgb(219, 194, 156);
+        }
+        40%{
+            transform:rotate(200deg);
+            background-color: rgb(216, 168, 95);
+        }
+        60%{
+            transform:rotate(250deg);
+            background-color: rgb(179, 128, 51);
+        }
+        80%{
+              background-color: rgb(151, 104, 33);
+              transform:rotate(300deg)
+            }
+            100%{
+                transform:rotate(350deg);
+                background-color: rgb(96, 59, 3);
+          }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+    </div>
+</body>
+</html>

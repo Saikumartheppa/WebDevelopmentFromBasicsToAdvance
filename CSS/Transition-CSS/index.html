@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition-CSS</title>
+    <style>
+      .container {
+        background-color: bisque;
+        width: 50vw;
+        height: 40vh;
+      }
+      .box {
+        background-color: aqua;
+        width: 15vw;
+        height: 12vh;
+        transition-property: transform;
+        /* transition-property: all; -> it would apply to all properties*/
+        /* transition-property: all; */
+        /* We can declare also transition-property: to more than 1 property by separating them with comma(,) */
+        /* transition-property: background-color, transform;
+        transition-duration: 5s;
+        transition-timing-function:ease-in;
+        transition-delay: 2s; */
+        /* shortHand ->  */
+        transition: all 4s cubic-bezier(0, 0.85, 1, 0.92) 2s;
+      }
+      .translate{
+        transform:translateX(10vw) translateY(10vh) scale(2);
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box translate"></div>
+    </div>
+  </body>
+</html>
