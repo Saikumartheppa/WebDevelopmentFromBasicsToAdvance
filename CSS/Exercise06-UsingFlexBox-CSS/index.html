@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise06-using FlexBox - CSS</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .logo img {
+        width: 170px;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: "Segoe UI";
+        height: 15vh;
+      }
+      .right ul {
+        display: flex;
+        gap: 15px;
+      }
+      .right ul li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .right ul li span {
+        padding: 0px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Design the nav bar of ultra edit website using flexbox -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+         <a href="https://www.ultraedit.com">
+             <img
+             src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp"
+             alt="UltraEditLogo"
+             />
+            </a>
+        </div>
+        <div class="right">
+          <ul>
+            <li>
+              <span> Products </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                color="#000000"
+                fill="none"
+              >
+                <path
+                  d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li>
+              <span> Pricing </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                color="#000000"
+                fill="none"
+              >
+                <path
+                  d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li>
+              <span> Resources </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                color="#000000"
+                fill="none"
+              >
+                <path
+                  d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li>
+              <span> About us </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                color="#000000"
+                fill="none"
+              >
+                <path
+                  d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li>
+              <span> Security and compliance </span>
+            </li>
+            <li>
+              <img
+                src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png"
+                alt="Language logo"
+                id="languageLogo"
+              />
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>

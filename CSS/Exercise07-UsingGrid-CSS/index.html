@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise06 Using Grid - CSS</title>
+    <style>
+        .second{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Segoe UI';
+        }
+        .grid{
+          display: grid;
+          grid-template-columns: repeat(3,1fr);
+          gap: 27px;
+          align-items: center;
+          justify-items: center;
+        }
+       .item{
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 3px;
+        /* border: 2px solid; */
+       }
+       .item-01 .eng{
+        padding-bottom: 45px;
+       }
+       .item p{
+        text-align: center;
+        font-size:12px;
+        margin-bottom: 19px;
+        font-weight: 450;
+       }
+       .lang{
+        text-align: center;
+        font-weight: 650;
+        /* padding-bottom: 40px; */
+        font-size: large;
+       }
+       .btn {
+         padding: 11px 14px;
+         border: none;
+         border-radius: 6px;
+         color: white;
+         font-weight: 700;
+         font-size: 12px;
+         margin: 3px;
+         cursor: pointer;
+        }
+      .blue {
+        background-color: #00b6d1;
+        opacity: 90%;
+      }
+      .green {
+        background-color: #5cb85c;
+      }
+      .blue:hover{
+        background-color: #07a0b7;
+      }
+      .green:hover{
+        opacity: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Design the body of this website: -->
+    <!-- https://bit.ly/UltraEdit-CWH  -->
+    <main>
+      <section class="second">
+        <div class="grid">
+          <div class="item item-01">
+            <div class="lang eng">English</div>
+            <button class="blue btn">Download 32-bit</button>
+            <button class="green btn">Download 64-bit</button>
+          </div>
+          <div class="item">
+            <div class="lang">Deutsch</div>
+            <p>German</p>
+            <button class="blue btn">Download 32-bit</button>
+            <button class="green btn">Download 64-bit</button>
+          </div>
+          <div class="item">
+            <div class="lang">Italiano</div>
+            <p>Italian</p>
+            <button class="blue btn">Download 32-bit</button>
+            <button class="green btn">Download 64-bit</button>
+          </div>
+          <div class="item">
+            <div class="lang">Español</div>
+            <p>Spanish</p>
+            <button class="blue btn">Download 32-bit</button>
+            <button class="green btn">Download 64-bit</button>
+          </div>
+          <div class="item">
+            <div class="lang">français</div>
+            <p>French</p>
+            <button class="blue btn">Download 32-bit</button>
+            <button class="green btn">Download 64-bit</button>
+          </div>
+          <div class="item">
+            <div class="lang">Português brasileiro</div>
+            <p>Brazilian Portuguese</p>
+            <button class="blue btn">Download 32-bit</button>
+            <button class="green btn">Download 64-bit</button>
+          </div>
+          <div class="item">
+            <div class="lang">日本</div>
+            <p>Japanese</p>
+            <button class="blue btn">Download 32-bit</button>
+            <button class="green btn">Download 64-bit</button>
+          </div>
+          <div class="item">
+            <div class="lang">한국어</div>
+            <p>Korean</p>
+            <button class="blue btn">Download 32-bit</button>
+            <button class="green btn">Download 64-bit</button>
+          </div>
+          <div class="item">
+            <div class="lang">中国</div>
+            <p>Chinese</p>
+            <button class="blue btn">Download 32-bit</button>
+            <button class="green btn">Download 64-bit</button>
+          </div>
+          <div class="item">
+            <div class="lang">中國</div>
+            <p>Traditional Chinese</p>
+            <button class="blue btn">Download 32-bit</button>
+            <button class="green btn">Download 64-bit</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
