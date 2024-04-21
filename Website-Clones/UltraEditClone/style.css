@@ -223,6 +223,7 @@ body .third{
   border: none;
   font-size: 17px;
   border-radius: 6px;
+  cursor: pointer;
 }
 .exeMsi{
   max-width: 65vw;
@@ -273,6 +274,7 @@ footer{
  color: rgba(0, 0, 0, 0.6);
  text-align: left;
  line-height: 22px;
+ cursor: pointer;
 }
 .sub{
   max-width: 14vw;
@@ -301,6 +303,10 @@ footer{
   font-weight: bold;
   color: #f9f9f9;
   background-color: #00b6d1;
+  cursor: pointer;
+}
+.box2 button:hover{
+  background-color:#07a0b7;
 }
 .copyRight{
   max-width: 65vw;
