@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise08 Animation - CSS</title>
+    <style>
+        .ball{
+            background-color: red;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            animation: animateX 3s linear infinite , animateY 1s ease-out infinite alternate;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .container{
+           width: 80vw;
+           height: 70vh;
+           background-color: blue;
+           position: relative;
+          }
+        @keyframes animateX {
+            from{
+              left: 0;
+            }
+            to{
+              left: 100%;
+            }
+        }
+        @keyframes animateY {
+            from{
+                bottom: 0;
+            }
+            to{
+                bottom: 100%;
+                
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball">
+        </div>
+    </div>
+</body>
+</html>
