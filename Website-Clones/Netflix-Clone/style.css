@@ -173,14 +173,14 @@ nav .navbuttons{
     position: relative;
 }
 .imgMonitor img{
-    max-width: 465px;
+    width: 465px;
     position: relative;
     z-index: 10;
 }
 .imgMonitor video{
     position: absolute;
-    max-width: 400px;
-    top: 100px;
+    width: 400px;
+    top: 127px;
     right: 0;
 }
  .stLayer{
@@ -232,6 +232,11 @@ section.first > div{
     display: flex;
     flex-direction: column;
     padding: 55px 0 100px 0;
+}
+@media screen and (max-width:1300px) {
+    section.first{
+        flex-wrap: wrap;
+    }
 }
 section.first > div :first-child{
     font-size: 48px;
@@ -296,16 +301,74 @@ footer{
     padding: 65px;
     color: #bcb9b9;
 }
-footer span{
+footer .questions{
     color: #bcb9b9;
     margin: 3px 0;
     max-width: 30vw;
     color: #bcb9b9;
+    padding: 30px 0;
 }
 .foo{
-    margin: 30px 0;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+}
+
+@media screen and (max-width:1300px) {
+    nav{
+        max-width: 90vw;
+    }
+    nav img{
+        width: 75px;
+    }
+    .eng{
+        max-width: 50px;
+        padding: 3px 6px;
+        gap: 4px;
+    }
+    .eng img{
+        max-width: 6px;
+    }
+    .eng select{
+        font-size: 8px;
+    }
+    .red-signIn{
+        padding: 5px 7px;
+        font-size: 8px;
+    }
+    .navbuttons{
+        gap: 10px;
+    }
+    .hero> :first-child{
+        font-size: 32px;
+    }
+    .hero> :nth-child(2){    
+        font-size: 18px;
+    }
+    .hero> :nth-child(3){
+        font-size: 18px;
+    }
+    .hero-buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        justify-content: center;
+        align-items: center;
+    }
+    .faq h2{
+        font-size: 32px;
+    }
+    footer{
+        padding: 40px;
+    }
+    .foo{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+    footer .questions{
+        padding: 15px 0;
+    }
+
 }
 .foo .box{
     column-gap: 20px;
@@ -316,8 +379,6 @@ footer span{
 .box .eng{
    position: relative;
    right: 63px;
-   /* max-width: 60px;
-   margin: auto; */
    color: #bcb9b9;
 }
 footer  a{
