@@ -1,7 +1,7 @@
-console.log("log");
-console.error("error");
-console.info("info");
-console.assert(3 % 2 == 0);
+// console.log("log");
+// console.error("error");
+// console.info("info");
+// console.assert(3 % 2 == 0);
 // console.log(console);
 // console.clear();
 
@@ -15,4 +15,17 @@ console.assert(3 % 2 == 0);
 
 console.time("a")
 console.warn("Sweet Warning");
-console.time("a")
+// console.time("a")
+
+console.time("ForLoop");
+for(let i = 0; i < 5; i++){
+    console.log(43);
+}
+console.timeEnd("ForLoop");
+console.time("WhileLoop");
+let i = 0
+while(i < 5){
+    console.log(43);
+    i++;
+}
+console.timeEnd("WhileLoop");
