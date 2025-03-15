@@ -1,0 +1,804 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #0c1e1b;
+  box-sizing: border-box;
+}
+/*     navbar   */
+nav {
+  background-color: #0c1e1b;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+}
+.navbar {
+  max-width: 85vw;
+  margin: auto;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 20px;
+}
+.geekLogo img {
+  padding: 14px 0;
+}
+.tech {
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+.tech p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0 14px;
+}
+.tech p select {
+  background-color: #0c1e1b;
+  color: #ffffff;
+  border: none;
+  line-height: 19px;
+}
+.sign-reqBtn .signIn {
+  font-weight: 600;
+  color: #29b475;
+  font-size: 14px;
+  cursor: pointer;
+}
+.sign-reqBtn .signIn:hover {
+  text-decoration: underline;
+}
+.sign-reqBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 1.7rem;
+}
+.btn:hover {
+  background-color: #2da06c;
+  animation: ease-in-out 1s;
+}
+.btn {
+  background-color: #29b475;
+  padding: 12px 33px;
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.btn span {
+  font-size: 14px;
+  padding: 0 3px;
+  background-color: inherit;
+}
+.btn span img {
+  background-color: inherit;
+}
+/*     Section 01      */
+.first {
+  background-color: #0c1e1b;
+  margin-top: 120px;
+}
+.content {
+  max-width: 85vw;
+  margin: 50px auto;
+  color: #ffffff;
+  display: flex;
+}
+.textArea {
+  max-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.futureWorld {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Roboto";
+}
+.futureWorld strong {
+  color: #29b475;
+}
+.fullStack {
+  margin-top: 10px;
+}
+.fullStack p {
+  font-weight: 300;
+  color: #949191ec;
+}
+.fullStack span {
+  color: #ffffff;
+  font-weight: 400;
+}
+.information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #142522;
+  padding: 20px 0;
+  border: solid 1px #142522;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+.info {
+  text-align: center;
+  line-height: 25px;
+  padding: 0 35px;
+  background-color: #142522;
+}
+.info :nth-child(1) {
+  color: #29b475;
+  font-weight: 700;
+  font-size: 20px;
+  background-color: #142522;
+}
+.info :nth-child(2) {
+  color: #e8eded94;
+  font-weight: 400;
+  font-size: 12px;
+  background-color: #142522;
+}
+.ver {
+  height: 50px;
+}
+.vertical {
+  opacity: 0.6;
+  border: 0;
+  border-style: solid;
+  border-left-width: 1px;
+  height: 100%;
+  border-color: #2d3748;
+}
+.ver hr {
+  box-sizing: content-box;
+  overflow: visible;
+}
+.reqButton {
+  margin-top: 30px;
+}
+
+/* BookDemo */
+
+.book {
+  width: 320px;
+  margin-left: 30px;
+  padding: 0 10px;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+.book div {
+  margin-bottom: 10px;
+  background-color: #ffffff;
+}
+.book #liveDemo,
+#free {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+}
+#liveDemo {
+  background-color: #ffffff;
+  color: #1a202c;
+  font-weight: 400;
+  padding: 15px 0 10px 0;
+}
+#free {
+  color: #29b475;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+  padding-bottom: 20px;
+}
+.det {
+  margin: 0 10px;
+}
+.det input::placeholder {
+  color: rgba(0, 0, 0, 0.24);
+}
+.det input {
+  background-color: #ffffff;
+  width: calc(100% - 20px);
+  font-size: 14px;
+  padding: 10px 0;
+  padding-left: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+.contact {
+  margin: 0 10px;
+  display: flex;
+  column-gap: 5px;
+}
+.contact span {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.24);
+}
+.contact input::placeholder {
+  color: rgba(0, 0, 0, 0.24);
+}
+.contact .cCode {
+  color: #0c1e1b;
+  background-color: inherit;
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.contact .pNum {
+  background-color: inherit;
+}
+.pNum input {
+  width: 220px;
+  color: rgba(0, 0, 0, 0.24);
+  font-size: 14px;
+  padding: 10px 0;
+  padding-left: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+.book #otp {
+  font-size: 12px;
+  background-color: inherit;
+  color: rgba(0, 0, 0, 0.24);
+  padding-top: 3px;
+  padding-left: 12px;
+  margin-bottom: 10px;
+}
+.course {
+  margin: 10px 0 0 10px;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 50px);
+  color: rgba(0, 0, 0, 0.24);
+  font-size: 14px;
+  padding: 10px 0;
+  padding-left: 20px;
+  padding-right: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+.course span {
+  background-color: inherit;
+}
+.course select {
+  font-size: 14px;
+  background-color: inherit;
+  border: none;
+  color: rgba(0, 0, 0, 0.24);
+}
+.btn:hover {
+  background-color: #2da06c;
+  animation: ease-in-out 1s;
+}
+.registerNow {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.regNow span {
+  font-size: 14px;
+  background-color: #29b475;
+  padding: 12px 50px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-family: "Roboto";
+}
+.regNow span img {
+  background-color: #29b475;
+  padding: 0 5px;
+}
+.regNow span:hover {
+  background-color: #2da06c;
+  animation: ease-in-out 1s;
+}
+.alreadyUser {
+  text-align: center;
+}
+.alreadyUser span {
+  background-color: #ffffff;
+  color: rgb(26, 32, 44);
+  font-weight: 600;
+  font-size: 14px;
+}
+.alreadyUser span strong {
+  color: rgb(33, 183, 118);
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.alreadyUser span strong:hover {
+  text-decoration: underline;
+}
+.privacyPolicy p {
+  font-size: 10px;
+  background-color: #ffffff;
+  color: #0c1e1b;
+  padding-left: 10px;
+  padding-bottom: 30px;
+}
+.privacyPolicy p strong {
+  color: rgb(41, 177, 120);
+  font-weight: 500;
+  background-color: #ffffff;
+}
+
+ /*---------------Candidates--------------------  */
+ .candidates{
+   max-width: 85vw;
+   margin: 70px auto;
+ }
+ .horiStudents{
+  flex-direction: row;
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+ }
+ .stu{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap:6px;
+  background-color: #142522;
+  padding: 15px 10px 18px 10px;
+  border-radius: 8px;
+ }
+ .stuProPic{
+  background-color: #142522;
+ }
+ .stuProPic img{
+  width: 64px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+ }
+ #hiredComp{
+  height: 18px;
+  background-color: #142522;
+ }
+.marquee  {
+  display: flex;
+  gap:20px;
+  animation: marquee 25s linear infinite;
+  box-sizing: border-box;
+  z-index: 1;
+}
+@keyframes marquee {
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(-100%); }
+}
+
+
+/*-----------------Recognized--------------*/
+.recognized {
+  max-width: 85vw;
+  margin: auto;
+}
+.recognized h4 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 35px;
+  background-color: inherit;
+}
+.recCompanies {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #ffffff;
+  border-radius: 16px;
+}
+.comp {
+  background-color: #ffffff;
+}
+.comp img {
+  background-color: #ffffff;
+  /* height: 50px; */
+  padding: 40px 20px;
+}
+.recCompanies .ver {
+  height: 60px;
+}
+.recCompanies .vertical {
+  border-color: #e2e8f0;
+}
+
+/*--------------------------Second---------------------------------------*/
+
+.second {
+  margin-top: 150px;
+  margin-bottom: 130px;
+}
+.exploreCourses {
+  max-width: 80vw;
+  margin: auto;
+}
+.exploreCourses h3 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+.courses {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 30px;
+}
+.learningProgramme{
+  max-width: 38vw;
+  margin: auto 0px;
+  background-color: #1d2e2b;
+  border-radius: 12px;
+}
+.RoadtoFSD {
+  background-color: #1d2e2b;
+}
+.RoadtoFSD{
+  width: 38vw;
+  height:20vw;
+  background-image: url("Assets/Images/fswd.png");
+  background-repeat: no-repeat;
+  background-clip:border-box;
+  background-position: center;
+  background-size: cover;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.RoadtoDS{
+  width: 38vw;
+  height:20vw;
+  background-image: url("Assets/Images/dshome.png");
+  background-repeat: no-repeat;
+  background-clip:border-box;
+  background-position: center;
+  background-size: cover;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.vdc img{
+  text-align: center;
+  margin: 150px 48%;
+  background-color: #29b475;
+  padding: 8px;
+  border-radius: 50% 50%;
+}
+.fswd {
+  max-width: 35vw;
+  margin: auto 20px;
+  background-color: #1d2e2b;
+}
+#fswd {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 30px;
+  background-color: #1d2e2b;
+  padding: 30px 0px;
+  line-height: 28px;
+  height: 24px;
+}
+#partner {
+  background-color: #1d2e2b;
+  color: #747d82;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+#partner strong {
+  color: rgb(255, 255, 255);
+  background-color: #1d2e2b;
+  font-weight: 500;
+}
+.bsd {
+  background-color: #1d2e2b;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 40px;
+}
+.batchSize {
+  background-color: rgba(253, 166, 16, 0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 20px;
+  border-radius: 6px;
+}
+.batchSize span {
+  background-color: rgba(253, 166, 16, 0);
+  color: #fda610;
+  padding: 0px 5px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.batchSize img {
+  color: #fda610;
+  background-color: rgba(253, 166, 16, 0);
+}
+.duration {
+  background-color: #216449;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 5px;
+  border-radius: 6px;
+}
+.duration span {
+  background-color: #216449;
+  color: #29b475;
+  padding: 0px 5px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.duration img {
+  background-color: #216449;
+  color: #29b475;
+}
+.cfswd {
+  background-color: #1d2e2b;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.cfswd span {
+  background-color: #1d2e2b;
+  color: rgb(255, 255, 255);
+  line-height: 35px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.cfswd span img {
+  background-color: #1d2e2b;
+  padding-right: 5px;
+}
+.brochureLearnMore {
+  display: inline-flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #1d2e2b;
+  gap: 30px;
+}
+
+.brochure {
+  background-color: #1d2e2b;
+  display: flex;
+  gap: 5px;
+  padding: 12px 30px;
+  border: 1px solid #25a269;
+  border-radius: 8px;
+}
+.brochure span {
+  color: #25a269;
+  background-color: #1d2e2b;
+  font-size: 14px;
+  font-weight: 500;
+}
+.brochure span img {
+  background-color: #1d2e2b;
+}
+.learnMore:hover{
+  background-color: #2da06c;
+  animation: ease-in-out 1s;
+}
+.learnMore {
+  background-color: #29b475;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 12px 60px;
+  border-radius: 8px;
+}
+.learnMore span {
+  background-color: #29b475;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.learnMore span img {
+  background-color: #29b475;
+}
+
+
+/*---------------------Third-------------------------- */
+
+.third{
+  background-color: #015941;
+  width: 100vw;
+}
+.wsg{
+  max-width: 80vw;
+  margin: auto;
+  background-color: #015941;
+  display: flex;
+  justify-content: space-between;
+}
+.startedGeekster{
+  background-color: #015941;
+  max-width: 35vw;
+}
+.startedGeekster p{
+  background-color: inherit;
+  color: rgb(255, 255, 255);
+  font-size: 42px;
+  line-height: 50px;
+  font-weight: 600;
+  padding: 35px 0;
+}
+.watchVideo{
+  display: inline-flex;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 40px;
+  gap:10px;
+  margin-bottom: 35px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.watchVideo span{
+  color: #29b475;
+  background-color: rgb(255, 255, 255);
+}
+.watchVideo span img{
+  background-color: rgb(255, 255, 255);
+  width: 20px;
+  margin-top: 5px;
+}
+.sahilVideo{
+  background-color: #015941;
+}
+.sahVideo{
+  background-color:  #015941;
+}
+
+
+/* ------------------- Fourth ------------------------- */
+.fourth{
+  background-color: #040404;
+  padding-top: 40px;
+}
+/* ------------------- Geekster Transform ------------------------- */
+.geeksterTransform{
+  max-width: 65vw;
+  margin: 0 auto;
+  background-color: #040404;
+  text-align: center;
+}
+.geekTransform{
+  background-color: #040404;
+  padding-bottom: 40px;
+}
+.gTransform p, .gTransform img , .gTransform , .gTransform p strong{
+  background-color: #040404;
+}
+.gTransform p{
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 72px;
+  color: rgb(255, 255, 255);
+}
+.gTransform p strong{
+  color: #29b475;
+}
+
+/* --------------------lwie------------------ */
+.lwei{
+  max-width: 85vw;
+  margin: 0 auto;
+  background-color: #040404;
+}
+.learnWith{
+  background-color: #040404;
+}
+.learnlive{
+  max-width: 70vw;
+  margin: 0 auto;
+  background-color: #040404;
+  padding-bottom: 40px;
+}
+.learnlive p{
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 50px;
+  background-color: #040404;
+  font-family: "Roboto" , sans-serif;
+}
+.educators{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  background-color: #040404;
+  max-width: 70vw;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.edu{
+  background-color: #1b2c29;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.educator{
+  background-color: #040404;
+  max-width: 20vw;
+  margin: 0 auto;
+  /* display: flex; */
+  align-items: center;
+}
+.educatorImg{
+  background-image: url("Assets/Educators/sahil_miglani.png");
+  background-repeat: no-repeat;
+  background-clip:border-box;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  width: 173px;
+  height: 174px;
+  background-color: #040404;
+}
+.educatorImg img{
+    text-align: center;
+    margin: 0px 40%;
+    margin-top: 105px;
+    background-color: #29b475;
+    padding: 8px;
+    border-radius: 50% 50%;
+}
+.educatorDetails{
+  background-color: #1b2c29;
+}
+.eduDetails{
+  text-align: center;
+  margin-top: 15px;
+  background-color: #1b2c29;
+}
+.eduDetails h3 , h4{
+  color: rgb(255, 255, 255);
+  line-height: 22px;
+  background-color: #1b2c29;
+}
+.eduDetails h3{
+  font-weight: 600;
+  font-size: 20px;
+}
+.eduDetails h4{
+  font-weight: 400;
+  font-size: 14px;
+}
+.eduDetails img{
+  width: 70px;
+  margin: 10px 0;
+  background-color: #1b2c29;
+}
+
+/* ----------------------Footer--------------------------- */
+.footer{
+  width: 100vw;
+  background-color: #040404;
+}
+.foot{
+  max-width: 80vw;
+  background-color: #040404;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.fooGeekster{
+  max-width: 12vw;
+  background-color: #040404;
+  margin: auto 0;
+}
