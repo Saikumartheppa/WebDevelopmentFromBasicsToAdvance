@@ -1,0 +1,21 @@
+html , body{
+    height: 100%;
+    width:100%;
+}
+.red{
+    background-color: red;
+    color: white;
+}
+.yellow{
+    background-color: yellow;
+    color: white;
+}
+.text-dark{
+    color: black;
+}
+.cyan{
+    background-color: cyan;
+}
+.green{
+    background-color: green;
+}
