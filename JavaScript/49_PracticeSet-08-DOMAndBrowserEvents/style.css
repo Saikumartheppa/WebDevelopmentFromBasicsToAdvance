@@ -1,0 +1,27 @@
+html , body {
+    height: 100%;
+    width : 100%;
+}
+.bulb{
+    background-color: yellow;
+}
+.bulbcontainer{
+    height:95px;
+    width: 95px;
+}
+.rgb{
+    height:95px;
+    width: 95px;
+    margin: 30px 0;
+    border-radius: 50%;
+    transition: background-color 0.5s ease-in-out;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
