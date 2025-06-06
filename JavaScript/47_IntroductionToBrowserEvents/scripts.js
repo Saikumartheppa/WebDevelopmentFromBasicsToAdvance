@@ -2,5 +2,6 @@ let button = document.getElementsByTagName('button')[0];
 button.onclick = () =>{
     button.style.background = 'red';
     button.style.color = 'white';
-    button.innerHTML = 'Button Clicked';
+    // button.innerHTML = 'Button Clicked';
+    button.insertAdjacentHTML = ('beforebegin' , "<button>Button Clicked!!</button>");
 }
