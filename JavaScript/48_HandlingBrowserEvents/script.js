@@ -12,7 +12,7 @@ let input = Number.parseInt(prompt("Enter a number"));
 
 let btn = document.getElementsByTagName('button')[0];
 btn.addEventListener('click' , a);
-// btn.addEventListener('click' , b);
-// if(input == 2){
-//     btn.removeEventListener('click' , b);
-// }
+btn.addEventListener('click' , b);
+if(input == 2){
+    btn.removeEventListener('click' , b);
+}
