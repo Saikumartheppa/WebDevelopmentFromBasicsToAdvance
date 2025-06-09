@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e5a5ff;
+  color: #676acb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.clock-container {
+  text-align: center;
+}
+
+#digitalClock {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.calendar-box {
+  display: inline-block;
+  background-color: #1d253c;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px #101d29b9;
+  width: 200px;
+}
+
+.day {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #bbb4d7;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.date-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.month-year {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
