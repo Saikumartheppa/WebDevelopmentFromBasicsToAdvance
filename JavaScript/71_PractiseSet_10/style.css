@@ -112,9 +112,7 @@ form.example::after {
    color: #f1f1f1;
    overflow: hidden;
    padding: 25px;
-   margin: 0 auto;
-   max-height: 20vh;
-   max-width: 20vw;
+   margin: 0 auto
 }
 .card h1{
     font-size: small;
