@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    max-width: 100vw;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+body{
+    width: 25vw;
+    margin: 200px 500px;
+}
+h1{
+    padding: 12px;
+    font-size: 20px;
+    background-color: rgb(138, 140, 138);
+    color: rgb(10, 10, 10);
+
+}
+.passwordGenerator{
+    background-color: black;
+}
+div  input{
+    width: 18vw;
+    text-align: left !important;
+    padding: 10px;
+    margin: 10px 10px;
+}
+.generateBtn{
+    padding: 12px;
+    background-color: rgb(138, 140, 138);
+    border-radius: 10px;
+    border: 2px solid rgb(246, 249, 246);
+    box-shadow: rgba(193, 32, 32, 0.2);
+    margin: 10px 10px;
+    cursor: pointer;
+    color: rgb(24, 25, 25);
+}
