@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Application</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="background"></div>
+    <div class="todoContainer">
+        <div class="todoHeader">
+            <div class="menu">
+                <img src="Assests/MenuBar.svg" alt="Menu" />
+                <!-- <i class='bxr  bx-menu-left'></i>  -->
+            </div>
+            <div class="allTasks">All Tasks</div>
+            <div class="notification">
+                <img src="Assests/Bell.svg" alt="Bell" />
+            </div>
+        </div>
+        <div class="todoNav">
+        <ul>
+            <li>Today</li>
+            <li>Daily</li>
+            <li>Weekly</li>
+            <li>Monthly</li>
+        </ul>
+      </div>
+      <div id = "todosList" class="todos">
+    </div>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Add New Task</h3>
+            <input type="text" id="todoInput" placeholder="Enter your task..." />
+            <div class="modal-buttons">
+                <button class="clicked" id="saveBtn">Save</button>
+                <button class = "clicked" id="discardBtn">Discard</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<footer>
+    <div id="delete" class="delete">
+        <img src="Assests/Delete.svg" alt="Delete" />
+    </div>
+    <div id = "add" class="add">
+        <img src="Assests/Add.svg" alt="Add" />
+    </div>
+</footer>
+<script src="script.js"></script>
+</html>
