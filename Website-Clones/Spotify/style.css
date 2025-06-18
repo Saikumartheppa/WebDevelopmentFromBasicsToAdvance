@@ -1,11 +1,14 @@
 * {
    margin: 0;
    padding: 0;
+   font-family: sans-serif;
 }
 body{
-    /* background-color: rgb(241, 241, 241);
-    color: white; */
+    background-color: rgb(241, 241, 241);
+    color: white;
 }
+
+/* Left Side section */
 .left{
     width: 25vw;
     padding: 10px;
@@ -13,13 +16,90 @@ body{
 .right{
     width: 75vw;
 }
-.home{
-    
-}
 .home ul li{
     display: flex;
     gap :14px;
     width: 14px;
     list-style: none;
     padding-top: 14px;
+    font-weight: bold;
+}
+.library{
+    min-height: 58vh;
+    position: relative;
+}
+.heading{
+    display: flex;
+    gap :14px;
+    width: 100%;
+    padding-top: 14px;
+    padding: 12px 10px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 10px;
+}
+.heading img{
+    width: 20px;
+}
+.left-footer{
+    display: flex;
+    font-size: 10px;
+    gap: 13px;
+    position: absolute;
+    bottom: 0;
+}
+.left-footer a{
+    color: grey;
+    text-decoration: none;
+}
+
+/* Right Side section */
+.right{
+    margin: 14px 0;
+}
+.rightHeader{
+    justify-content: space-between;
+    background-color: rgb(34 34 34);
+}
+.rightHeader > *{
+    padding: 14px;
+}
+.spotifyPlaylists{
+    padding: 12px;
+}
+.cardContainer{
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px;
+}
+.card{
+    width: 180px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #252525;
+    position: relative;
+}
+.card > *{
+    padding-top: 8px;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.play{
+    height: 20px;
+    width: 20px;
+    background-color: #1fdf64;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    right: 16px;
+    top: 160px;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+.card:hover .play{
+   opacity: 1;
+   top: 150px;
 }
