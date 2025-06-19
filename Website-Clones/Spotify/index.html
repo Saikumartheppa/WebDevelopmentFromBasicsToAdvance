@@ -9,31 +9,25 @@
   </head>
   <body>
     <div class="container flex bg-black">
+      <!-- Left Sidebar -->
       <div class="left">
         <div class="home bg-grey rounded m-1 p-1">
           <div class="logo">
-            <img
-              class="invert"
-              src="Assests/SpotifyLogo.svg"
-              alt="SpotifyLogo"
-            />
+            <img class="invert" src="Assests/SpotifyLogo.svg" alt="SpotifyLogo" />
           </div>
           <ul>
             <li>
-              <img class="invert" src="Assests/Home.svg" alt="Home" />Home
+              <img class="invert" src="Assests/Home.svg" alt="Home" /> Home
             </li>
             <li>
-              <img class="invert" src="Assests/Search.svg" alt="Search" />Search
+              <img class="invert" src="Assests/Search.svg" alt="Search" /> Search
             </li>
           </ul>
         </div>
+
         <div class="library bg-grey rounded m-1 p-1">
           <div class="heading">
-            <img
-              class="invert"
-              src="Assests/LibraryIcon2.svg"
-              alt="LibraryIcon"
-            />
+            <img class="invert" src="Assests/LibraryIcon2.svg" alt="LibraryIcon" />
             <h2>Your Library</h2>
           </div>
           <div class="left-footer">
@@ -70,42 +64,50 @@
           </div>
         </div>
       </div>
-      <div class="right bg-grey rounded ">
+
+      <!-- Right Side -->
+      <div class="right bg-grey rounded">
         <div class="rightHeader flex">
           <div class="nav">
-            <img class="invert" src="Assests/LeftArrow.svg" alt="LeftArrow">
-            <img class="invert" src="Assests/RightArrow.svg" alt="RightArrow">
+            <img class="invert" src="Assests/LeftArrow.svg" alt="LeftArrow" />
+            <img class="invert" src="Assests/RightArrow.svg" alt="RightArrow" />
           </div>
           <div class="buttons">
-            <button type="button">Login</button>
-            <button type="button">SignUp</button>
+            <button class="signUpBtn" type="button">Sign up</button>
+            <button class="loginBtn" type="button">Log in</button>
           </div>
         </div>
-        <div class="spotifyPlaylists ">
-          <h1>Spotify Playlists</h1>
+
+        <div class="spotifyPlaylists">
+          <h3>Spotify Playlists</h3>
           <div class="cardContainer flex">
             <div class="card">
               <div class="play">
-                <img class="justify-content align-items" src="Assests/Play.svg" alt="Play">
+                <img class="justify-content align-items" src="Assests/Play.svg" alt="Play" />
               </div>
-                  <img src="https://i.scdn.co/image/ab67706f00000002a46ea55285180036c5e8f196" alt="HappyHits">
-                  <h2>Happy Hits!</h2>
-                  <p>Hits to boost your mood and fill you with Happiness!</p>
+              <img src="https://i.scdn.co/image/ab67706f00000002a46ea55285180036c5e8f196" alt="HappyHits" />
+              <h4>Happy Hits!</h4>
+              <p>Hits to boost your mood and fill you with Happiness!</p>
             </div>
-             <div class="card">
-               <div class="play">
-                <img class="justify-content align-items" src="Assests/Play.svg" alt="Play">
-              </div>
-                  <img src="https://i.scdn.co/image/ab67706f00000002a46ea55285180036c5e8f196" alt="HappyHits">
-                  <h2>Happy Hits!</h2>
-                  <p>Hits to boost your mood and fill you with Happiness!</p>
+
+          </div>
+          <div class="playbar">
+            <div class="songInfo">
+
             </div>
-            
-            </div>
+             <div class="songButtons flex justify-content">
+               <img class="invert" src="Assests/songPrevious.svg" alt="songPrevious">
+               <img class="invert" src="Assests/songPlay.svg" alt="songPrevious">
+               <img class="invert" src="Assests/songNext.svg" alt="songPrevious">
+             </div>
+             <div class="songTime">
+              
+             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
