@@ -143,7 +143,6 @@ async function main(){
             }
         }
     }
-
     seekBar.addEventListener("mousedown" , (e)=>{
         startDrag(e);
     });
