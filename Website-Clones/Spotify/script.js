@@ -103,6 +103,8 @@ async function main(){
     // })
 
     // Add an Even Listener(drag n drop) to sneek Bar
+
+    
     function updateSeekBarPosition(e){
         const rect = seekBar.getBoundingClientRect();
         const x = e.clientX - rect.left;
