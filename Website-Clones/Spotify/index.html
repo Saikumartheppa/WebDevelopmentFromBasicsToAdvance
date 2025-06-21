@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify- Clone</title>
+    <title>Spotify - Web Player: Music for everyone</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="utility.css" />
   </head>
@@ -13,22 +13,34 @@
       <div class="left">
         <div class="home bg-grey rounded m-1 p-1">
           <div class="logo">
-            <img class="invert" src="Assests/SpotifyLogo.svg" alt="SpotifyLogo" />
+            <img
+              class="invert"
+              src="Assests/SpotifyLogo.svg"
+              alt="SpotifyLogo"
+            />
           </div>
           <ul>
             <li>
               <img class="invert" src="Assests/Home.svg" alt="Home" /> Home
             </li>
             <li>
-              <img class="invert" src="Assests/Search.svg" alt="Search" /> Search
+              <img class="invert" src="Assests/Search.svg" alt="Search" />
+              Search
             </li>
           </ul>
         </div>
 
         <div class="library bg-grey rounded m-1 p-1">
-          <div class="heading">
-            <img class="invert" src="Assests/LibraryIcon2.svg" alt="LibraryIcon" />
+          <div class="heading flex align-items">
+            <img
+              class="invert"
+              src="Assests/LibraryIcon2.svg"
+              alt="LibraryIcon"
+            />
             <h2>Your Library</h2>
+          </div>
+          <div class="songsList">
+            <ul></ul>
           </div>
           <div class="left-footer">
             <div>
@@ -83,26 +95,37 @@
           <div class="cardContainer flex">
             <div class="card">
               <div class="play">
-                <img class="justify-content align-items" src="Assests/Play.svg" alt="Play" />
+                <img
+                  class="justify-content align-items"
+                  src="Assests/Play.svg"
+                  alt="Play"
+                />
               </div>
-              <img src="https://i.scdn.co/image/ab67706f00000002a46ea55285180036c5e8f196" alt="HappyHits" />
+              <img
+                src="https://i.scdn.co/image/ab67706f00000002a46ea55285180036c5e8f196"
+                alt="HappyHits"
+              />
               <h4>Happy Hits!</h4>
               <p>Hits to boost your mood and fill you with Happiness!</p>
             </div>
-
           </div>
           <div class="playbar">
-            <div class="songInfo">
-
+            <div class="seekBar">
+              <div class="circle"></div>
             </div>
-             <div class="songButtons flex justify-content">
-               <img class="invert" src="Assests/songPrevious.svg" alt="songPrevious">
-               <img class="invert" src="Assests/songPlay.svg" alt="songPrevious">
-               <img class="invert" src="Assests/songNext.svg" alt="songPrevious">
-             </div>
-             <div class="songTime">
-              
-             </div>
+            <div class="player flex">
+              <div class="songInfo"></div>
+              <div class="songButtons flex justify-content">
+                <img
+                  id="previous"
+                  src="Assests/songPrevious.svg"
+                  alt="songPrevious"
+                />
+                <img id="play" src="Assests/songPlay.svg" alt="songPrevious" />
+                <img id="next" src="Assests/songNext.svg" alt="songPrevious" />
+              </div>
+              <div class="songTime"></div>
+            </div>
           </div>
         </div>
       </div>

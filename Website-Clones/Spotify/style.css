@@ -6,8 +6,11 @@
 body{
     background-color: rgb(241, 241, 241);
     color: white;
+    height: 100vh;
 }
-
+body.dragging{
+    user-select: none;
+}
 /* Left Side section */
 .left{
     width: 25vw;
@@ -22,22 +25,57 @@ body{
     font-weight: bold;
 }
 .library{
-    min-height: 70vh;
+    min-height: 71.5vh;
     position: relative;
 }
 .heading{
-    display: flex;
     gap :14px;
     width: 100%;
     padding-top: 14px;
     padding: 12px 10px;
     font-weight: bold;
-    align-items: center;
     font-size: 10px;
 }
 .heading img{
     width: 20px;
 }
+
+/* Library songs List */
+
+.songsList{
+    max-height: 54vh;
+    overflow-y: scroll;
+    margin-bottom: 22px;
+}
+
+.songsList ul{
+    padding: 0 8px;
+}
+
+.songsList ul li{
+    list-style-type: decimal;
+    font-size: 12px;
+    gap: 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    margin: 8px 0;
+    padding: 15px;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+.songsList .info{
+    font-size: 11px;
+    width: 140px;
+}
+.playNow span{
+    width: 55px;
+    font-size: 11px;
+}
+.playNow img{
+    width: 14px;
+}
+
 .left-footer{
     display: flex;
     font-size: 10px;
@@ -96,8 +134,7 @@ body{
     width: 75px;
 }
 .spotifyPlaylists{
-    padding: 10px;
-     
+    padding: 10px;  
 }
 .cardContainer{
     flex-wrap: wrap;
@@ -142,13 +179,47 @@ body{
 }
 
 .playbar{
-    position: absolute;
-    bottom: 0;
-    background-color: #8bff71;
-    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    filter: invert(1);
+    background-color: #dad5d5;
+    border-radius: 10px;
+    width: 70vw;
     padding: 10px;
+    height: 30px;
 }
-
 .songButtons{
     gap: 16px;
+}
+
+.songButtons img{
+    cursor: pointer;
+}
+.seekBar{
+    height: 3px;
+    width: 70vw;
+    position: absolute;
+    bottom: 0;
+    background-color:  black;
+    border-radius: 10px;
+    margin: 6px;
+    cursor: pointer;
+}
+.circle{
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: black;
+    position: relative;
+    bottom: 4px;
+    left: 0;
+    transition: left 0.3s;
+}
+.player{
+    justify-content: space-between;
+}
+.songInfo , .songTime{
+    color: black;
+    padding: 0 8px;
+    transition: all 1s ease-out;
 }
