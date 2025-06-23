@@ -1,5 +1,5 @@
 let currentSong = new Audio();
- let songs;
+let songs;
 let isDragging = false;
 const seekBar = document.querySelector(".seekBar");
 const circle = document.querySelector(".circle");
@@ -19,14 +19,14 @@ function secondsToMinutes(seconds) {
 }
 
 function attachSongClickListeners() {
- // Add an EventListener to each Song
+  // Add an EventListener to each Song
   Array.from(
     document.querySelector(".songsList").getElementsByTagName("li")
   ).forEach((e) => {
     e.addEventListener("click", (element) => {
-      setTimeout(()=>{
+      setTimeout(() => {
         e.classList.toggle("clickedBG");
-      }, 250)
+      }, 250);
       e.classList.toggle("clickedBG");
       // console.log(e.querySelector(".info").firstElementChild.innerHTML);
       playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim());
@@ -35,10 +35,10 @@ function attachSongClickListeners() {
 }
 
 async function getSongs(folder) {
-
   currFolder = folder;
   let s = await fetch(
-    `http://127.0.0.1:3000/Website-Clones/Spotify/Assests/Songs/${folder}`);
+    `http://127.0.0.1:3000/Website-Clones/Spotify/Assests/Songs/${folder}`
+  );
   let response = await s.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -53,7 +53,6 @@ async function getSongs(folder) {
       songs.push(decodedName);
     }
   }
-
 
   // Show all songs in the playList
 
@@ -73,9 +72,6 @@ async function getSongs(folder) {
                   <img class="invert" src="Assests/songPlay.svg" alt="Play" />
                 </div></li> `;
   }
-
-  
-
 }
 const playMusic = (track, pause = false) => {
   currentSong.src = `Assests/Songs/${currFolder}/` + track;
@@ -87,12 +83,66 @@ const playMusic = (track, pause = false) => {
   document.querySelector(".songTime").innerHTML = " 00:00 / 00:00";
 };
 
+async function displayAlbums() {
+  let s = await fetch(
+    `http://127.0.0.1:3000/Website-Clones/Spotify/Assests/Songs/`
+  );
+  let response = await s.text();
+  let div = document.createElement("div");
+  div.innerHTML = response;
+  let anchors = div.getElementsByTagName("a");
+  let cardContainer = document.querySelector(".cardContainer");
+  // console.log(div);
+  let arr = Array.from(anchors);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].href.includes(`/Songs/`)) {
+      // console.log(e.href.split(`/`).slice(-2)[0]);
+      let folder = arr[i].href.split(`/`).slice(-2)[0];
+      // console.log(folder);
+      let a = await fetch(
+        `http://127.0.0.1:3000/Website-Clones/Spotify/Assests/Songs/${folder}/info.json`
+      );
+      let response = await a.json();
+      // console.log(jsonResponse);
+      cardContainer.innerHTML = cardContainer.innerHTML + `<div data-folder=${folder} class="card">
+              <div class="play">
+                <img
+                  class="justify-content align-items"
+                  src="Assests/Play.svg"
+                  alt="Play"
+                />
+              </div>
+              <img
+                src="Assests/Songs/${folder}/cover.jpg"
+                alt="HappyHits"
+              />
+              <h4>${response.title}</h4>
+              <p>${response.description}</p>
+            </div>`
+    }
+  }
+
+  // Load the Play List whenever card is clicked
+  Array.from(document.getElementsByClassName("card")).forEach((element) => {
+    element.addEventListener("click", async (item) => {
+      //  console.log(item.target , item.currentTarget)
+      console.log(item.currentTarget.dataset.folder);
+      songs = await getSongs(`${item.currentTarget.dataset.folder}`);
+      attachSongClickListeners();
+      // console.log(songs);
+      // playMusic(songs[0], true);
+    });
+  });
+}
+
 async function main() {
   // fetch all songs
-  await getSongs("favourite");
+  await getSongs("Top50");
   attachSongClickListeners();
   playMusic(songs[0], true);
-  
+
+  // Display all the albums dynamically
+  displayAlbums();
 
   // Add an Event Listener to Play
   play.addEventListener("click", () => {
@@ -106,30 +156,34 @@ async function main() {
   });
 
   // Add an Event Listener to  Previous
-  previous.addEventListener("click" , ()=>{
+  previous.addEventListener("click", () => {
     currentSong.pause();
-    let idx = songs.indexOf(decodeURIComponent(currentSong.src.split("/").pop()));
-    if(idx > 0){
+    let idx = songs.indexOf(
+      decodeURIComponent(currentSong.src.split("/").pop())
+    );
+    if (idx > 0) {
       playMusic(songs[idx - 1]);
 
       // If current song is first in the list , If user clicks on previous it will play last song
-    }else if(idx == 0){
+    } else if (idx == 0) {
       playMusic(songs[songs.length - 1]);
     }
-  })
-  // Add an Event Listener to  Next 
-  next.addEventListener("click" , ()=>{
+  });
+  // Add an Event Listener to  Next
+  next.addEventListener("click", () => {
     currentSong.pause();
-    let idx = songs.indexOf(decodeURIComponent(currentSong.src.split("/").pop()));
-    if(idx < songs.length - 1){
+    let idx = songs.indexOf(
+      decodeURIComponent(currentSong.src.split("/").pop())
+    );
+    if (idx < songs.length - 1) {
       playMusic(songs[idx + 1]);
 
       // If current song is last in the list , If user clicks on next it will play first song
-    }else if(idx == songs.length - 1){
+    } else if (idx == songs.length - 1) {
       playMusic(songs[0]);
     }
-  })
-  
+  });
+
   // Listen to Time Update Event
   currentSong.addEventListener("timeupdate", () => {
     if (!isDragging) {
@@ -140,13 +194,12 @@ async function main() {
         (currentSong.currentTime / currentSong.duration) * 100 + "%";
     }
   });
- 
-  
+
   //  Add an Event listener to load  Meta data
   currentSong.addEventListener(
     "loadedmetadata",
     () => {
-      console.log("On Loaded metata Event called");
+      // console.log("On Loaded metata Event called");
       document.querySelector(
         ".songTime"
       ).innerHTML = `00:00 / ${secondsToMinutes(currentSong.duration)}`;
@@ -156,13 +209,13 @@ async function main() {
 
   // Add an Event listener to sneek Bar
 
-//       seekBar.addEventListener("click" , (element) =>{
-//       let percent = (element.offsetX / element.target.getBoundingClientRect().width) * 100;
-//       document.querySelector(".circle").style.left = percent + "%";
-//       currentSong.currentTime = (percent * currentSong.duration) / 100;
-//   })
+  //       seekBar.addEventListener("click" , (element) =>{
+  //       let percent = (element.offsetX / element.target.getBoundingClientRect().width) * 100;
+  //       document.querySelector(".circle").style.left = percent + "%";
+  //       currentSong.currentTime = (percent * currentSong.duration) / 100;
+  //   })
 
-//   Add an Even Listener(drag n drop) to sneek Bar
+  //   Add an Even Listener(drag n drop) to sneek Bar
 
   function updateSeekBarPosition(e) {
     const rect = seekBar.getBoundingClientRect();
@@ -213,33 +266,26 @@ async function main() {
     stopDrag(e);
   });
 
-
-// Add an Event Listener for Hamburger
-document.querySelector(".hamburger").addEventListener("click" , ()=>{
+  // Add an Event Listener for Hamburger
+  document.querySelector(".hamburger").addEventListener("click", () => {
     document.querySelector(".left").style.left = "0";
-})
+  });
 
-// Add an Event Listener for Hamburger
-document.querySelector(".close").addEventListener("click" , ()=>{
+  // Add an Event Listener for Hamburger
+  document.querySelector(".close").addEventListener("click", () => {
     document.querySelector(".left").style.left = "-120%";
-})
+  });
 
-// Add an Event Listener for Volume
+  // Add an Event Listener for Volume
 
-document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change" , (e)=>{
-  // console.log(e , e.target.value , e.target);
-  currentSong.volume = Number.parseInt(e.target.value)/100;
-})
+  document
+    .querySelector(".range")
+    .getElementsByTagName("input")[0]
+    .addEventListener("change", (e) => {
+      // console.log(e , e.target.value , e.target);
+      currentSong.volume = Number.parseInt(e.target.value) / 100;
+    });
 
-// Load the Play List whenever card is clicked
-Array.from(document.getElementsByClassName("card")).forEach(element=>{
-  element.addEventListener("click" , async (item)=>{
-    //  console.log(item.target , item.currentTarget) 
-    // console.log(item.currentTarget.dataset.folder);
-     songs = await getSongs(`${item.currentTarget.dataset.folder}`);
-     attachSongClickListeners();
-  })
-})
 }
 
 main();
