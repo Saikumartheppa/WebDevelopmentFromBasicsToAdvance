@@ -140,7 +140,8 @@ async function main() {
         (currentSong.currentTime / currentSong.duration) * 100 + "%";
     }
   });
-
+ 
+  
   //  Add an Event listener to load  Meta data
   currentSong.addEventListener(
     "loadedmetadata",
