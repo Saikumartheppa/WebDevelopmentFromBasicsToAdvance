@@ -11,6 +11,9 @@
     <div class="container flex bg-black">
       <!-- Left Sidebar -->
       <div class="left">
+        <div class="close">
+          <img width="20px" src="Assests/Close.svg" alt="Close">
+        </div>
         <div class="home bg-grey rounded m-1 p-1">
           <div class="logo">
             <img
@@ -81,8 +84,11 @@
       <div class="right bg-grey rounded">
         <div class="rightHeader flex">
           <div class="nav">
-            <img class="invert" src="Assests/LeftArrow.svg" alt="LeftArrow" />
-            <img class="invert" src="Assests/RightArrow.svg" alt="RightArrow" />
+            <div class="navBarIcons flex justify-content align-items">
+              <img class="hamburger" src="Assests/Hamburger.svg" alt="Hamburger">
+              <img class="invert" src="Assests/LeftArrow.svg" alt="LeftArrow" />
+              <img class="invert" src="Assests/RightArrow.svg" alt="RightArrow" />
+            </div>
           </div>
           <div class="buttons">
             <button class="signUpBtn" type="button">Sign up</button>
@@ -93,7 +99,37 @@
         <div class="spotifyPlaylists">
           <h3>Spotify Playlists</h3>
           <div class="cardContainer flex">
-            <div class="card">
+            <div data-folder="ncs" class="card">
+              <div class="play">
+                <img
+                  class="justify-content align-items"
+                  src="Assests/Play.svg"
+                  alt="Play"
+                />
+              </div>
+              <img
+                src="https://i.scdn.co/image/ab67706f00000002a46ea55285180036c5e8f196"
+                alt="HappyHits"
+              />
+              <h4>Happy Hits!</h4>
+              <p>Hits to boost your mood and fill you with Happiness!</p>
+            </div>
+            <div data-folder="cs" class="card">
+              <div class="play">
+                <img
+                  class="justify-content align-items"
+                  src="Assests/Play.svg"
+                  alt="Play"
+                />
+              </div>
+              <img
+                src="https://i.scdn.co/image/ab67706f00000002a46ea55285180036c5e8f196"
+                alt="HappyHits"
+              />
+              <h4>Happy Hits!</h4>
+              <p>Hits to boost your mood and fill you with Happiness!</p>
+            </div>
+            <div data-folder="favourite" class="card">
               <div class="play">
                 <img
                   class="justify-content align-items"
@@ -113,7 +149,7 @@
             <div class="seekBar">
               <div class="circle"></div>
             </div>
-            <div class="player flex">
+            <div class="player flex align-items">
               <div class="songInfo"></div>
               <div class="songButtons flex justify-content">
                 <img
@@ -124,7 +160,15 @@
                 <img id="play" src="Assests/songPlay.svg" alt="songPrevious" />
                 <img id="next" src="Assests/songNext.svg" alt="songPrevious" />
               </div>
-              <div class="songTime"></div>
+              <div class="timeAndVolume flex align-items">
+                <div class="songTime"></div>
+                <div class="volume flex justify-content align-items">
+                  <img class="invert" src="Assests/Volume.svg" alt="Volume">
+                  <div class="range">
+                    <input type="range" name="Range" id="range">
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
