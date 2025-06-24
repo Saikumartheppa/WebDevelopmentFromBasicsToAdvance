@@ -121,18 +121,8 @@ async function displayAlbums() {
             </div>`
     }
   }
+  
 
-  // Load the Play List whenever card is clicked
-  Array.from(document.getElementsByClassName("card")).forEach((element) => {
-    element.addEventListener("click", async (item) => {
-      //  console.log(item.target , item.currentTarget)
-      console.log(item.currentTarget.dataset.folder);
-      songs = await getSongs(`${item.currentTarget.dataset.folder}`);
-      attachSongClickListeners();
-      // console.log(songs);
-      // playMusic(songs[0], true);
-    });
-  });
 }
 
 async function main() {
@@ -142,7 +132,7 @@ async function main() {
   playMusic(songs[0], true);
 
   // Display all the albums dynamically
-  displayAlbums();
+  await displayAlbums();
 
   // Add an Event Listener to Play
   play.addEventListener("click", () => {
@@ -274,6 +264,19 @@ async function main() {
   // Add an Event Listener for Hamburger
   document.querySelector(".close").addEventListener("click", () => {
     document.querySelector(".left").style.left = "-120%";
+  });
+
+// Load the Play List whenever card is clicked
+  Array.from(document.getElementsByClassName("card")).forEach((element) => {
+    element.addEventListener("click", async (item) => {
+      //  console.log(item.target , item.currentTarget)
+      console.log(item.currentTarget.dataset.folder);
+      await getSongs(`${item.currentTarget.dataset.folder}`);
+      attachSongClickListeners();
+      // console.log(songs);
+      playMusic(songs[0], true);
+      circle.style.left = "0";
+    });
   });
 
   // Add an Event Listener for Volume
