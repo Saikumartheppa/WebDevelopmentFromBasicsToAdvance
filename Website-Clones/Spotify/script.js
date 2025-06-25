@@ -289,6 +289,20 @@ async function main() {
       currentSong.volume = Number.parseInt(e.target.value) / 100;
     });
 
+  // Add an Event Listener to Mute the Volume
+  document.querySelector(".volume>img").addEventListener("click" , e=>{
+    // console.log(e.target.src);
+    if( e.target.src.endsWith("Volume.svg")){
+        e.target.src =   e.target.src.replace("Volume.svg" ,"Mute.svg");
+        currentSong.volume = 0;
+        document.querySelector(".range").getElementsByTagName("input")[0].value = 0;
+      }else{
+        e.target.src =  e.target.src.replace("Mute.svg" , "Volume.svg");
+        currentSong.volume = 0.10;
+        document.querySelector(".range").getElementsByTagName("input")[0].value = 10;
+    }
+  })
+
 }
 
 main();

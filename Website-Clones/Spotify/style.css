@@ -272,6 +272,9 @@ body.dragging {
 .volume img{
   width: 20px;
 }
+.range input{
+  cursor: pointer;
+}
 
 /* Media Queries */
 @media (max-width: 1200px) {
