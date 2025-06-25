@@ -287,6 +287,12 @@ async function main() {
     .addEventListener("change", (e) => {
       // console.log(e , e.target.value , e.target);
       currentSong.volume = Number.parseInt(e.target.value) / 100;
+      if(currentSong.volume > 0){
+         document.querySelector(".volume>img").src = document.querySelector(".volume>img").src.replace("Mute.svg" , "Volume.svg");
+        }
+      if(currentSong.volume == 0){
+        document.querySelector(".volume>img").src = document.querySelector(".volume>img").src.replace("Volume.svg" , "Mute.svg");
+      }
     });
 
   // Add an Event Listener to Mute the Volume

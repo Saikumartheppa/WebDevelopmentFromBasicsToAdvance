@@ -283,7 +283,7 @@ body.dragging {
     left: -120%;
     z-index: 1;
     transition: all 0.3s;
-    width: 92%;
+    width: 100%;
     background-color: black;
     padding: 0;
   }
@@ -292,7 +292,7 @@ body.dragging {
     position: absolute;
   }
   .library{
-    min-height: 65vh;
+    min-height: 60vh;
   }
   .songsList{
     max-height: 48vh;
@@ -304,7 +304,7 @@ body.dragging {
   .cardContainer{
     justify-content: center;
     margin: 0;
-    max-height: 72vh;
+    max-height: 67vh;
   }
   .card{
     width: 45vw;
@@ -333,7 +333,10 @@ body.dragging {
   flex-direction: column;
 }
 }
-@media (max-width: 450px) {
+@media (max-width: 500px) {
+  .cardContainer{
+    margin-bottom: 25vh;
+  }
   .card{
     width: 90vw;
   }
